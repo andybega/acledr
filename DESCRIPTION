@@ -1,0 +1,19 @@
+Package: acledr
+Title: Download and Transform ACLED Data
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Andreas",
+           family = "Beger",
+           role = c("aut", "cre"),
+           email = "adbeger@gmail.com",
+           comment = c(ORCID = "0000-0003-1883-3169"))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    countrycode,
+    readxl
+Suggests: 
+    testthat (>= 2.1.0)
+RoxygenNote: 6.1.1
