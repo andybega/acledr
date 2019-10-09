@@ -7,6 +7,8 @@
 
 [![Travis build
 status](https://travis-ci.com/andybega/acledr.svg?branch=master)](https://travis-ci.com/andybega/acledr)
+[![Codecov test
+coverage](https://codecov.io/gh/andybega/acledr/branch/master/graph/badge.svg)](https://codecov.io/gh/andybega/acledr?branch=master)
 <!-- badges: end -->
 
 The goal of acledr is to download and read ACLED event data with R.

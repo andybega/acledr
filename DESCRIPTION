@@ -19,5 +19,6 @@ Imports:
     utils
 Suggests: 
     testthat (>= 2.1.0),
-    httr
+    httr,
+    covr
 RoxygenNote: 6.1.1

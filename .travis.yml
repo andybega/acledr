@@ -2,3 +2,7 @@
 
 language: R
 cache: packages
+
+# Code coverage report
+after_success:
+  - Rscript -e 'covr::codecov()'
