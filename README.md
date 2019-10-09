@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.com/andybega/acledr.svg?branch=master)](https://travis-ci.com/andybega/acledr)
 <!-- badges: end -->
 
 The goal of acledr is to download and read ACLED event data with R.

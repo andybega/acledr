@@ -1,6 +1,6 @@
 Package: acledr
 Title: Download and Transform ACLED Data
-Version: 0.0.1
+Version: 0.0.1.9000
 Authors@R: 
     person(given = "Andreas",
            family = "Beger",
