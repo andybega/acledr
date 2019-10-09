@@ -41,7 +41,10 @@ read_acled <- function(data_path = NULL) {
 
   events$gwcode <- countrycode::countrycode(events[["iso"]], "iso3n", "cown")
   events$gwcode[events$gwcode==679] <- 678L  # Yemen
-  events$gwcode[events$ISO==275]    <- 667L  # Palestine
+  events$gwcode[events$iso==275]    <- 667L  # Palestine
+  events$gwocde[events$country=="Serbia"]  <- 340L  # from NA
+  events$gwcode[events$country=="Kosovo"]  <- 347L  # from NA
+  events$gwcode[events$country=="Vietnam"] <- 816L  # from 817
 
   events
 }
