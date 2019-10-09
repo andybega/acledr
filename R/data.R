@@ -4,3 +4,8 @@
 #'
 #' @source \url{https://www.acleddata.com/wp-content/uploads/dlm_uploads/2018/02/Country-and-Time-Period-coverage_updatedJune2019-1.pdf}
 "acled_coverage"
+
+#' ACLED event data sample
+#'
+#' A sample of the ACLED event data
+"acled_sample"

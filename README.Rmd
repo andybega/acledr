@@ -64,8 +64,23 @@ download_acled()
 events <- read_acled()
 ```
 
+A sample of the event data is included in the package. 
+
+```{r}
+data("acled_sample")
+str(acled_sample)
+```
+
+### Country coverage start
+
 An additional salient piece of information when trying to turn the raw event data into time series or panel data for countries over time is the country-specific coverage time range. E.g. there are not many ACLED events for Romania, but nomially the coverage starts on 2018-01-01, and thus if we want to turn a sparse set of events in Romania into a time series, we should use 0 values back to 2018-01-01. 
 
-ACLED lists the country coverages in a [PDF document on their website](https://www.acleddata.com/wp-content/uploads/dlm_uploads/2018/02/Country-and-Time-Period-coverage_updatedJune2019-1.pdf). 
+ACLED lists the country coverages in a [PDF document on their website](https://www.acleddata.com/wp-content/uploads/dlm_uploads/2018/02/Country-and-Time-Period-coverage_updatedJune2019-1.pdf). This is included in the package:
+
+```{r}
+data("acled_coverage")
+str(acled_coverage)
+```
+
 
 
