@@ -18,7 +18,7 @@ writeBin(content(r, as = "raw"), "data-raw/pdf/coverage.pdf")
 
 coverage <- extract_tables("data-raw/pdf/coverage.pdf")
 coverage <- do.call(rbind, coverage)
-coverage <- as.data.frame(coverage)
+coverage <- as.data.frame(coverage, stringsAsFactors = FALSE)
 colnames(coverage) <- c("country", "start")
 coverage <- coverage[!coverage$start %in% c("", "Time period"), ]
 
