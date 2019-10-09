@@ -9,6 +9,14 @@
 
 The goal of acledr is to download and read ACLED event data with R.
 
+ACLED provides two options for programmatic access: a API that allows
+specific event queries, and several Excel data dump files for each of
+region datasets, e.g. Africa. This package solely uses the data dump
+files. Thus downloading the data means the entire dump files will be
+downloaded. This might not be the most efficient method if you only need
+data for a single country. In that case it’s maybe easier to point and
+click the web API.
+
 ## Installation
 
 Install from GitHub with:
@@ -28,12 +36,36 @@ install.packages("acledr")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+**acledr** downloads the ACLED continent data dump files to a local
+directory. The download and read functions are setup by default to
+consult the `acledr.data_dir` option for the location of that directory.
+To make life easier, set that option in your `.Rprofile` file:
 
 ``` r
-library(acledr)
+library("usethis")
+usethis::edit_r_profile()
+# add:
+#
+# # acledr data directory
+# options(acledr.data_dir = "path/to/acled/data")
+```
+
+Then, to download and read all ACLED events into memory:
+
+``` r
+library("acledr")
 
 download_acled()
 
 events <- read_acled()
 ```
+
+An additional salient piece of information when trying to turn the raw
+event data into time series or panel data for countries over time is the
+country-specific coverage time range. E.g. there are not many ACLED
+events for Romania, but nomially the coverage starts on 2018-01-01, and
+thus if we want to turn a sparse set of events in Romania into a time
+series, we should use 0 values back to 2018-01-01.
+
+ACLED lists the country coverages in a [PDF document on their
+website](https://www.acleddata.com/wp-content/uploads/dlm_uploads/2018/02/Country-and-Time-Period-coverage_updatedJune2019-1.pdf).

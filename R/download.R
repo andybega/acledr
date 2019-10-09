@@ -1,17 +1,4 @@
 
-#' Data path
-#'
-#' Path to folder containing data
-#'
-#' @param dots additional elements to splice into path, e.g. file name
-#'
-#' @export
-acled_data_path <- function(...) {
-  dots <- list(...)
-  path <- c(getOption("acledr.data_dir"), dots)
-  do.call(file.path, path)
-}
-
 #' Download ACLED data
 #'
 #' Download the curated ACLED .xlsx data files
@@ -28,7 +15,7 @@ download_acled <- function(to_dir = NULL, which = "all") {
   outpaths <- acled_data_path(paste0(names(urls), ".xlsx"))
   for (i in 1:length(urls)) {
     cat(sprintf("Downloading %s\n", basename(outpaths[[i]])))
-    download.file(urls[[i]], destfile = outpaths[[i]])
+    utils::download.file(urls[[i]], destfile = outpaths[[i]])
   }
   invisible(outpaths)
 }

@@ -3,9 +3,9 @@
 
 test_that("URLs are valid and working", {
 
-  skip()
+  skip("Don't want to ping server for tests")
 
-  library(httr)
+  library("httr")
 
   urls <- curated_data_urls()
 

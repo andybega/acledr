@@ -1,6 +1,6 @@
 Package: acledr
 Title: Download and Transform ACLED Data
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: 
     person(given = "Andreas",
            family = "Beger",
@@ -11,9 +11,13 @@ Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends:
+    R (>= 2.10)
 Imports: 
     countrycode,
-    readxl
+    readxl,
+    utils
 Suggests: 
-    testthat (>= 2.1.0)
+    testthat (>= 2.1.0),
+    httr
 RoxygenNote: 6.1.1
